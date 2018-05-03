@@ -1,0 +1,43 @@
+<! Doctype HTML>
+<html>
+	<head>
+		<title>Neighborhood map</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="static/css/main.css">
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 650px)" href="static/css/mobile.css">
+	</head>
+	<body>
+		<nav id="panel">
+			<h1>Neighborhood map</h1>
+			<label for="categList"><span class="label">Search by category</span></label>
+			<select id="categList" class="input">
+				<option disabled selected>All categories</option>
+				<!-- ko foreach: Model.categories -->
+					<option data-bind="text: $data"></option>
+				<!-- /ko -->
+			</select><br>
+			<label for="nameSearch"><span class="label">Search by place name</span></label>
+			<input id="nameSearch" class="input"><br>
+			<label for="locatList"><b>List of locations:</b></label>
+			<select id="locatList" class="input">
+				<option disabled selected>Select the location</option>
+				<!-- ko foreach: Model.markers -->
+					<option data-bind="attr: {value: $index}, text: title"></option>
+				<!-- /ko -->
+			</select>
+			<div id="details">
+				<div id="photos" data-bind="foreach: Model.photosList">
+					<img class="photo" data-bind="attr: {src: $data}" alt="photo of the place">
+				</div>
+				<div id="description"></div>
+			</div>
+		</nav>
+		<div id="messagesField"></div>
+		<div id="map"></div>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyCQQiTJ7GdG2Sq2dVvIGAlZ7cBd-jxcJWY&language=en&callback=ViewModel.initMap"></script>
+		<script src="static/js/jquery-3.3.1.js"></script>
+		<script src="static/js/knockout-3.4.2.js"></script>
+		<script src="static/js/app.js"></script>
+	</body>
+</html>

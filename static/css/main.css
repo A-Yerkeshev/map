@@ -1,0 +1,70 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #EEDABD;
+}
+::-webkit-scrollbar-thumb {
+    background: #DB8A10;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #9F6000; 
+}
+#panel {
+	float: left;
+	width: 28%;
+	background-color: #FDF5E5;
+	height: 100%;
+	font-style: italic;
+	border: solid;
+	border-color: #AE5F11;
+	padding-left: 10px;
+	overflow: hidden;
+}
+#map {
+	height: 100%;
+	width: 70%;
+}
+#messagesField {
+	background-color: #FDF5E5;
+	font-style: italic;
+	text-align: center;
+	padding: 10px;
+	-webkit-text-fill-color: red;
+	font-weight: bold;
+	display: none;
+	font-size: 20;
+}
+#details {
+	width: 90%;
+	height: 60%;
+}
+#photos {
+	overflow: auto;
+	overflow-y: hidden;
+	height: 110px;
+	white-space: nowrap;
+}
+#description {
+	overflow: scroll;
+	overflow-x: hidden;
+}
+.label {
+	font-size: 20;
+    font-weight: bold;
+}
+.input {
+	width: 90%;
+	margin-left: 5px;
+	background-color: #FFFDF5;
+	border-color: #AE5F11;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+.photo {
+	margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+	vertical-align: top;
+}
